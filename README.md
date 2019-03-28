@@ -1,4 +1,4 @@
-# Add inline update to your nova navigation
+# Add inline update to your nova resources
 
 This tool allows you to update a field of a resource in the index view (inline edit).
 
