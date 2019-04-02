@@ -7,7 +7,7 @@ This tool allows you to update a field of a resource in the index view (inline e
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require wehaa/inline-field-update
+composer require wehaa/liveupdate
 ```
 
 ## Usage
