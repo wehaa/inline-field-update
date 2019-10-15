@@ -16,7 +16,7 @@ class Liveupdate extends Field
 
     protected function resolveAttribute($resource, $attribute)
     {
-        $this->setResourceId(data_get($resource, 'id'));
+        $this->setResourceId(data_get($resource, $resource->getKeyName()));
 
         return parent::resolveAttribute($resource, $attribute);
     }
