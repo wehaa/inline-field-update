@@ -2,8 +2,6 @@
 /vendor
 /node_modules
 package-lock.json
-package.json
-webpack.mix.js
 composer.phar
 composer.lock
 phpunit.xml
