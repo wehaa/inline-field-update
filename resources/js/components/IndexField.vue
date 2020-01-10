@@ -29,8 +29,8 @@ export default {
     methods: {
         save() {
             var vm = this;
-            if (this.value != this.field.value) {   
-                if (!this.loading) {   
+            if (this.value != this.field.value) {
+                if (!this.loading) {
                     Nova.request().post(
                         `/live-update/update/${this.resourceName}`,
                         {
@@ -46,6 +46,16 @@ export default {
                     .catch (function (error) {
                         vm.loading = false
                         console.log(error);
+
+                        if (error.response.status == 422) {
+                            let validationErrors = [];
+
+                            error.response.data.errors.value.forEach(function (errorMessage) {
+                                validationErrors.push(errorMessage.replace('value', vm.field.name));
+                            });
+
+                            vm.$toasted.show(validationErrors.join('<br>'), { type: 'error' });
+                        }
                     })
                 }
                 this.loading = true;
