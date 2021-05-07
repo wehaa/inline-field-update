@@ -7,6 +7,7 @@
             :placeholder="field.name"
             v-model="value"
             @blur="save"
+            :style="'min-width:'+field.minWidth+'px;'"
         />
         <!-- thanks to https://github.com/epartment/nova-unique-ajax-field/blob/master/resources/js/components/FormField.vue -->
         <div class="absolute rotating text-80 flex justify-center items-center pin-y pin-r mr-3" v-show="loading">

@@ -25,4 +25,9 @@ class Liveupdate extends Field
     {
         return $this->withMeta(['id' => $id, 'nova_path' => Config::get('nova.path')]);
     }
+
+    public function minWidth($width = 100)
+    {
+        return $this->withMeta(['minWidth' => $width]);
+    }
 }
