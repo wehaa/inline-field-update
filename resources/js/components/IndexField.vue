@@ -1,7 +1,7 @@
 <template>
     <div class="relative flex items-stretch">
         <input
-            :id="field.name + resourceId"
+            :id="field.name + field.id"
             type="text"
             class="w-full form-control form-input form-input-bordered live-update"
             :placeholder="field.name"
