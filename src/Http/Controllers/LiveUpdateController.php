@@ -11,7 +11,7 @@ class LiveUpdateController extends Controller
     {
         $resourceClass = $request->resource();
         $resourceValidationRules = $resourceClass::rulesForUpdate($request);
-        $fieldValidationRules = $resourceValidationRules[$request->attribute];
+        $fieldValidationRules = $resourceValidationRules[$request->attribute] ?? [];
 
         if (!empty($fieldValidationRules)) {
             $validatedData = $request->validate([
