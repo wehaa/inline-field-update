@@ -26,7 +26,7 @@ export default {
          * Set the initial, internal value for the field.
          */
         setInitialValue() {
-            this.value = this.field.value || ''
+            this.value = String(this.field.value) || ''
         },
 
         /**

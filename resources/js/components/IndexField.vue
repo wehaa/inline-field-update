@@ -65,7 +65,7 @@ export default {
             }
         },
         setInitialValue() {
-            this.value = this.field.value || ''
+            this.value = String(this.field.value) || ''
         },
         fill(formData) {
             formData.append(this.field.attribute, this.value || '')
